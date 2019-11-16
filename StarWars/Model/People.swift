@@ -10,5 +10,7 @@ import Foundation
 
 struct People: Codable {
     let count: Int
-    let results: [People]
+//    let next: String
+//    let prev: String
+    let results: [Person]
 }
