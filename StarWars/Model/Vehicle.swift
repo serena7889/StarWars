@@ -1,5 +1,5 @@
 //
-//  Person.swift
+//  Vehicle.swift
 //  StarWars
 //
 //  Created by Serena Lambert on 16/11/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Person: Codable {
+struct Vehicle: Codable {
     let name, model, manufacturer, costInCredits: String
     let length, maxAtmospheringSpeed, crew, passengers: String
     let cargoCapacity, consumables, vehicleClass: String
@@ -18,13 +18,13 @@ struct Person: Codable {
 
     enum CodingKeys: String, CodingKey {
         case name, model, manufacturer
-        case costInCredits
+        case costInCredits = "cost_in_credits"
         case length
-        case maxAtmospheringSpeed
+        case maxAtmospheringSpeed = "max_atmosphering_speed"
         case crew, passengers
-        case cargoCapacity
+        case cargoCapacity = "cargo_capacity"
         case consumables
-        case vehicleClass
+        case vehicleClass = "vehicle_class"
         case pilots, films, created, edited, url
     }
 }

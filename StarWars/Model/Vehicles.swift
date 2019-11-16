@@ -1,5 +1,5 @@
 //
-//  People.swift
+//  Vehicles.swift
 //  StarWars
 //
 //  Created by Serena Lambert on 16/11/2019.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct People: Codable {
+struct Vehicles: Codable {
     let count: Int
     let next: String?
-    let prev: String?
-    let results: [Person]
+    let previous: String?
+    let results: [Vehicle]
 }

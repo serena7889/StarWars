@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  VehicleListVC.swift
 //  StarWars
 //
 //  Created by Serena Lambert on 16/11/2019.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class PeopleListVC: UIViewController {
+class VehicleListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var people = [Person]()
+
+    var vehicles = [Vehicle]()
     var selectedIndex: Int?
     
     override func viewDidLoad() {
@@ -23,19 +23,19 @@ class PeopleListVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        getPeople()
+        getVehicles()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let personDetailVC = segue.destination as? PersonDetailVC {
-            personDetailVC.person = people[selectedIndex!]
+        if let vehicleDetailVC = segue.destination as? VehicleDetailVC {
+            vehicleDetailVC.vehicle = vehicles[selectedIndex!]
         }
     }
     
     
-    func getPeople() {
-        NetworkService.instance.getPeople(onSuccess: { (people) in
-            self.people = people
+    func getVehicles() {
+        NetworkService.instance.getVehicles(onSuccess: { (vehicles) in
+            self.vehicles = vehicles
             self.tableView.reloadData()
         }) { (error) in
              debugPrint(error)
@@ -44,21 +44,21 @@ class PeopleListVC: UIViewController {
 
 }
 
-extension PeopleListVC: UITableViewDelegate, UITableViewDataSource {
+extension VehicleListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+        return vehicles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell") as? TitleCell else { return UITableViewCell() }
-        cell.configureCell(title: people[indexPath.row].name)
+        cell.configureCell(title: vehicles[indexPath.row].name)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
-        performSegue(withIdentifier: "toPersonDetailVC", sender: self)
+        performSegue(withIdentifier: "toVehicleDetailVC", sender: self)
     }
-    
+
 }

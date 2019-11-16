@@ -1,5 +1,5 @@
 //
-//  PersonCell.swift
+//  TitleCell.swift
 //  StarWars
 //
 //  Created by Serena Lambert on 16/11/2019.
@@ -12,9 +12,9 @@ class TitleCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
     
-    func configureCell(person: Person) {
+    func configureCell(title: String) {
         selectionStyle = .none
-        nameLbl.text = person.name
+        nameLbl.text = title
     }
 
 }

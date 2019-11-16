@@ -10,7 +10,12 @@
 		436AB65F237F7A1D00383194 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB65E237F7A1D00383194 /* Person.swift */; };
 		436AB662237F7A3C00383194 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB661237F7A3C00383194 /* People.swift */; };
 		436AB666237F7EAF00383194 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB665237F7EAF00383194 /* NetworkService.swift */; };
-		436AB668237F932000383194 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB667237F932000383194 /* PersonCell.swift */; };
+		436AB66A237F9A7700383194 /* PersonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB669237F9A7700383194 /* PersonDetailVC.swift */; };
+		436AB66C2380421E00383194 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB66B2380421E00383194 /* Vehicle.swift */; };
+		436AB66E2380422800383194 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB66D2380422800383194 /* Vehicles.swift */; };
+		436AB6722380463300383194 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB6712380463300383194 /* TitleCell.swift */; };
+		436AB674238046EC00383194 /* VehicleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB673238046EC00383194 /* VehicleListVC.swift */; };
+		436AB676238047CA00383194 /* VehicleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436AB675238047CA00383194 /* VehicleDetailVC.swift */; };
 		436E3AE9237F73D200E12625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E3AE8237F73D200E12625 /* AppDelegate.swift */; };
 		436E3AEB237F73D200E12625 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E3AEA237F73D200E12625 /* SceneDelegate.swift */; };
 		436E3AED237F73D200E12625 /* PeopleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E3AEC237F73D200E12625 /* PeopleListVC.swift */; };
@@ -23,7 +28,12 @@
 		436AB65E237F7A1D00383194 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		436AB661237F7A3C00383194 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		436AB665237F7EAF00383194 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		436AB667237F932000383194 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		436AB669237F9A7700383194 /* PersonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailVC.swift; sourceTree = "<group>"; };
+		436AB66B2380421E00383194 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		436AB66D2380422800383194 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		436AB6712380463300383194 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		436AB673238046EC00383194 /* VehicleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListVC.swift; sourceTree = "<group>"; };
+		436AB675238047CA00383194 /* VehicleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailVC.swift; sourceTree = "<group>"; };
 		436E3AE5237F73D200E12625 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E3AE8237F73D200E12625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		436E3AEA237F73D200E12625 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +58,7 @@
 		436AB65C237F79A900383194 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				436AB667237F932000383194 /* PersonCell.swift */,
+				436AB6712380463300383194 /* TitleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -58,6 +68,8 @@
 			children = (
 				436AB65E237F7A1D00383194 /* Person.swift */,
 				436AB661237F7A3C00383194 /* People.swift */,
+				436AB66B2380421E00383194 /* Vehicle.swift */,
+				436AB66D2380422800383194 /* Vehicles.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				436E3AEC237F73D200E12625 /* PeopleListVC.swift */,
+				436AB669237F9A7700383194 /* PersonDetailVC.swift */,
+				436AB673238046EC00383194 /* VehicleListVC.swift */,
+				436AB675238047CA00383194 /* VehicleDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,13 +197,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436AB66C2380421E00383194 /* Vehicle.swift in Sources */,
+				436AB674238046EC00383194 /* VehicleListVC.swift in Sources */,
 				436E3AED237F73D200E12625 /* PeopleListVC.swift in Sources */,
+				436AB6722380463300383194 /* TitleCell.swift in Sources */,
+				436AB676238047CA00383194 /* VehicleDetailVC.swift in Sources */,
 				436E3AE9237F73D200E12625 /* AppDelegate.swift in Sources */,
+				436AB66A237F9A7700383194 /* PersonDetailVC.swift in Sources */,
 				436AB65F237F7A1D00383194 /* Person.swift in Sources */,
 				436E3AEB237F73D200E12625 /* SceneDelegate.swift in Sources */,
 				436AB666237F7EAF00383194 /* NetworkService.swift in Sources */,
 				436AB662237F7A3C00383194 /* People.swift in Sources */,
-				436AB668237F932000383194 /* PersonCell.swift in Sources */,
+				436AB66E2380422800383194 /* Vehicles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
